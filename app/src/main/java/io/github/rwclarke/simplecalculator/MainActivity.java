@@ -121,14 +121,19 @@ public class MainActivity extends Activity {
         clearBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                leftValueStr = "";
+                rightValueStr = "";
+                result = 0;
+                runningNumber = "";
+                currentOperation = null;
+                resultView.setText("");
             }
         });
 
         calcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                processOperation(Operation.EQUAL);
             }
         });
 
@@ -165,7 +170,7 @@ public class MainActivity extends Activity {
     void processOperation(Operation operation) {
         if (currentOperation != null) {
             if (runningNumber != "") {
-                leftValueStr = runningNumber;
+                rightValueStr = runningNumber;
                 runningNumber = "";
 
                 switch (currentOperation) {
