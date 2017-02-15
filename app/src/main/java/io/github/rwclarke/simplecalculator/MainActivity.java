@@ -203,4 +203,31 @@ public class MainActivity extends Activity {
         runningNumber += String.valueOf(number);
         resultView.setText(runningNumber);
     }
+
+
+
+    // Life Cycles
+
+    public void onStart() {
+        super.onStart();  // Always call the superclass method first
+    }
+
+    public void onResume() {
+        super.onResume();  // Always call the superclass method first
+    }
+
+    public void onPause() {
+        super.onPause();  // Always call the superclass method first
+    }
+
+    public void onStop() {
+        super.onPause();  // Always call the superclass method first
+    }
+
+    public void onRestart() {
+        super.onRestart();  // Always call the superclass method first
+    }
+
+
+
 }
